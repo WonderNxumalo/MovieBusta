@@ -15,3 +15,5 @@ const MovieDetails = ({ movie }) => {
 };
 
 export default MovieDetails;
+
+// Showing the movie poster, title, and year is unnecessary here. Only shows the rating, genre(s), and movie plot. Visible onClick "Movie Info" button, invisible when clicked again

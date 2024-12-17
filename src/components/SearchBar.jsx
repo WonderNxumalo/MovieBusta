@@ -3,10 +3,12 @@ import { useState } from "react";
 const SearchBar = ({ onSearch }) => {
     const [searchTerm, setSearchTerm] = useState('');
 
+    // To set keys to searchTerm, ready for submission.
     const handleChange = (e) => {
         setSearchTerm(e.target.value);
     };
 
+    // Submit search term to axios fetch function onClick search button 
     const handleSubmit = (e) => {
         e.preventDefault();
         onSearch(searchTerm);
