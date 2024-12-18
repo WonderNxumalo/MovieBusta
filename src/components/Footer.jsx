@@ -1,3 +1,5 @@
+import { faGithub, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Footer () {
     return (
@@ -6,14 +8,14 @@ function Footer () {
             <div className="text-white">
                 <ul className="flex flex-row align-center justify-evenly">
                     <a  href="https://github.com/WonderNxumalo" target="_blank">
-                        <img src="https://img.icons8.com/?size=30&id=62856&format=png&color=ffffff" alt="GitHub_logo" />
+                    <FontAwesomeIcon icon={faGithub} size="xl" />
                     </a>
                     <a  href="https://x.com/Mthonti_" target="_blank">
-                        <img src="https://img.icons8.com/?size=30&id=phOKFKYpe00C&format=png&color=ffffff" alt="Twitter/X_logo" />
+                    <FontAwesomeIcon icon={faXTwitter} size="xl" />
                     </a>
                     
                     <a  href="https://www.linkedin.com/in/wonder-nxumalo-415b6289/" target="_blank">
-                        <img src="https://img.icons8.com/?size=30&id=8808&format=png&color=ffffff" alt="LinkedIn_logo" />
+                    <FontAwesomeIcon icon={faLinkedin} size="xl" />
                     </a>
                 </ul>
             </div>

@@ -1,5 +1,8 @@
 // Site name, Movie Busta, act as a link to the "Home Page" and also clears the search bar, returns the home page with saved favourite movies, if any.
 
+import { faClapperboard } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 function Head () {
     return (
         <div className="container bg-gradient-to-br from-purple-500 to-blue-500 p-2">
