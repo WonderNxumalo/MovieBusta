@@ -23,7 +23,7 @@ const Favourite = () => {
 
   return (
     <div className="container mx-auto mt-0">
-      <h2 className='bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold text-lg md:text-xl lg:text-3xl mb-1'>Favourite Movies ({favouriteMovies.length})</h2>
+      <h2 className='bg-blue-400 text-white font-bold text-lg md:text-xl lg:text-3xl mb-1'>Favourite Movies ({favouriteMovies.length})</h2>
       <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {favouriteMovies.map((movie) => (
           <li key={movie.id} className="bg-white shadow-md rounded-lg p-4 flex flex-col justify-center items-center mb-2">

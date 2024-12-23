@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Footer () {
     return (
-        <div className="container bg-gradient-to-br from-blue-500 to-purple-500 text-lg p-2">
+        <div className="container bg-gradient-to-b from-blue-300 to-blue-600 text-lg p-2">
             <p className="text-white text-lg md:text-xl xl:text-2xl mb-1"> &copy; Wonder Nxumalo_ALX  2024</p>
             <div className="text-white">
                 <ul className="flex flex-row align-center justify-evenly">

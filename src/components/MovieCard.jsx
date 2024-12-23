@@ -32,7 +32,7 @@ const MovieCard = ({ movie, onClick }) => {
     // If there is a poster, display the retrieved poster or else the default poster.
     const imageURL = movie.poster_path ? `https://image.tmdb.org/t/p/w300/${movie.poster_path}` : defaultPosterURL;
     return (
-            <div className=" shadow-md rounded-lg p-4" onClick={onClick}>
+            <div className=" shadow-md rounded-lg p-4 bg-white m-1 flex flex-col" onClick={onClick}>
                 <img className="rounded-md" src={imageURL} alt={movie.original_title} />
                 <h2 className="text-lg font-bold mt-2">{movie.original_title}</h2>
                 <p className="text-gray-500">{movie.release_date.substring(0, 4)}</p>

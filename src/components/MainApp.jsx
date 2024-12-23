@@ -34,7 +34,7 @@ function MainApp() {
 
   // The components are ordered together with the searchBar handleSearch function. Only the MainApp is imported in the final App.
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 bg-blue-900">
       <Head />
       <SearchBar onSearch={handleSearch} />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
