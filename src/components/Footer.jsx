@@ -1,5 +1,5 @@
 import { faGithub, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // use FontAwesome to add social media icons
 
 function Footer () {
     return (
