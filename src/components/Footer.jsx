@@ -2,9 +2,12 @@ import { faGithub, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-i
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // use FontAwesome to add social media icons
 
 function Footer () {
+
+    const currentYear = new Date().getFullYear();
+
     return (
         <div className="container bg-gradient-to-b from-blue-300 to-blue-600 text-lg p-2">
-            <p className="text-white text-lg md:text-xl xl:text-2xl mb-1"> &copy; Wonder Nxumalo_ALX  2024</p>
+            <p className="text-white text-lg md:text-xl xl:text-2xl mb-1"> &copy; Wonder Nxumalo_ALX  {currentYear}</p>
             <div className="text-white">
                 <ul className="flex flex-row align-center justify-evenly">
                     <a  href="https://github.com/WonderNxumalo" target="_blank">
