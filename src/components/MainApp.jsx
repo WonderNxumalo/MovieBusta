@@ -2,7 +2,6 @@ import { useState } from 'react';
 import axios from 'axios';
 import SearchBar from './SearchBar';
 import MovieCard from './MovieCard';
-{/* import MovieDetails from './MovieDetails'; */}
 import apiKey from './api';
 import Head from './Header';
 import Footer from './Footer';
@@ -11,6 +10,7 @@ import Favourite from './Favourite';
 function MainApp() {
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
+  const [searchPerformed, setSearchPerformed] = useState(false); // To handle search state and ensure that no error is diplayed prior search and handles errors if no movie is found
 
 // Handles search function, fetch data from TMDB using axios. API key is imported, the API key file is not sent to GitHub. The fetch excludes adult movies
   const handleSearch = async (searchTerm) => {
@@ -19,12 +19,13 @@ function MainApp() {
       if (response.data.results) {
         setMovies(response.data.results);
       } else {
-        console.error('No movies found');
         setMovies([]);
       }
+      setSearchPerformed(true); // set to True once search is performed
     } catch (error) {
       console.error('Error fetching movies:', error);
       setMovies([]);
+      setSearchPerformed(true);
     }
   };
 
@@ -38,15 +39,18 @@ function MainApp() {
       <Head />
       <SearchBar onSearch={handleSearch} />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
-        {movies.length > 0 ? (
+      {searchPerformed ? (
+        movies.length > 0 ? (
           movies.map((movie) => (
-            <MovieCard key={movie.id} movie={movie} onClick={() => handleMovieClick(movie)} /> //Movie card visible is the fetch function returns movies
+            <MovieCard key={movie.id} movie={movie} onClick={() => handleMovieClick(movie)} />
           ))
         ) : (
-          <p></p>
-        )}
+          <p className='text-red-500 font-bold'>No movie found, search another title</p>
+        )
+      ) : (
+        <div></div> // displays no error unless search is made
+      )}
       </div>
-      {/* {selectedMovie && <MovieDetails movie={selectedMovie} />} */}
       <Favourite />
       <Footer />
     </div>

@@ -7,7 +7,8 @@ function Footer () {
 
     return (
         <div className="container bg-gradient-to-b from-blue-300 to-blue-600 text-lg p-2">
-            <p className="text-white text-lg md:text-xl xl:text-2xl mb-1"> &copy; Wonder Nxumalo_ALX  {currentYear}</p>
+            <p className="text-white text-lg md:text-xl xl:text-2xl mb-1"> &copy; Wonder Nxumalo {currentYear} </p>
+            <p className="text-white text-base md:text-xl xl:text-2xl mb-1">ALX Capstone Project. All Rights Reserved</p>
             <div className="text-white">
                 <ul className="flex flex-row align-center justify-evenly">
                     <a  href="https://github.com/WonderNxumalo" target="_blank">
